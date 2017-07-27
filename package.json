@@ -19,6 +19,7 @@
   "homepage": "https://github.com/alanttran/eat-da-burger#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "bulma": "^0.4.4",
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.9",
