@@ -2,17 +2,25 @@
 	<h1>EAT DA BURGER</h1>
 <div class="columns">
 	<div class="column">
+		
 		<ul>
 		{{#each burgers}}
 			{{#unless this.devoured}}
 		  <li class="burger-item">
-		    <b>{{this.burger_name}}</b>
-			{{this.devoured}}
-			<a class="button is-danger"><i class="fa fa-cutlery" aria-hidden="true"></i></a>	    
+		  	<div class="card">
+		  		<div class="card-content" >
+			  		<form action="{{this.id}}?_method=PUT" method="POST" style="display: flex; align-items: center;">
+				    <b>{{this.burger_name}}</b>
+					<button class="button is-danger" style= "margin-left: 10px;"><i class="fa fa-cutlery" aria-hidden="true"></i></button>	
+				</div>
+		  	</div>
+		  	
+			</form>   
 		  </li>
 		  {{/unless}}
 		{{/each}}
 		</ul>
+		
 	</div>
 	<div class="column">
 		<ul>
@@ -20,7 +28,6 @@
 			{{#if this.devoured}}
 		  <li class="burger-item">
 		    {{this.burger_name}}
-			{{this.devoured}}    
 		  </li>
 		  {{/if}}
 		{{/each}}
